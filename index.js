@@ -1,4 +1,4 @@
-import config from "./eslint.config";
+import config from "./eslint.config.js";
 import core from "./rules/core.js";
 import ignores from "./rules/ignores.js";
 import imports from "./rules/imports.js";
