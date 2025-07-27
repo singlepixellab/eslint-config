@@ -6,7 +6,7 @@ The ESLint rules and configs used by Single Pixel Lab.
 
 1. Install package
    ```
-   npm install -dev @singlepixellab/eslint-config
+   npm install -dev @singlepixellab/eslint-config eslint
    ```
 
 ## VS Code
