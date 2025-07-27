@@ -1,0 +1,3 @@
+// This empty file is added because of an issue with eslint-plugin-import,
+// remove it when the below issue is fixed
+// https://github.com/import-js/eslint-plugin-import/issues/3079
