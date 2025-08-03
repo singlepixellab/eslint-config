@@ -44,6 +44,9 @@ export default [
       // Require return statements for all code paths to avoid undefined returns
       "consistent-return": "error",
 
+      // Enforce consistent brace style for all control statements
+      "curly": ["error", "multi-line"],
+
       // Enforce calling super() in constructors to ensure proper initialization
       "constructor-super": "error",
 
@@ -265,6 +268,9 @@ export default [
 
       // Disallow unused labels to prevent dead code
       "no-extra-label": "error",
+
+      // Disallow assignments to native objects or read-only global variables
+      "no-global-assign": "error",
 
       // Disallow fallthroughs in `switch` to avoid bugs
       "no-fallthrough": "error",
@@ -522,8 +528,10 @@ export default [
       // Disallow initializing variables to undefined to avoid redundancy
       "no-undef-init": "error",
 
-      // Disallow use of undefined variable to prevent bugs
-      "no-undefined": "error",
+      // Disallow use of undefined variable to prevent bugs,
+      // we  use the no-global-assign and no-shadow-restricted-names rules to
+      // prevent undefined from being shadowed or assigned a different value
+      "no-undefined": "off",
 
       // Disallow dangling underscores in identifiers
       "no-underscore-dangle": [

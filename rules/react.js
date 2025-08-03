@@ -29,8 +29,25 @@ export default [
       ...reactPlugin.configs.flat["jsx-runtime"].rules,
       ...jsxA11y.flatConfigs.recommended.rules,
 
+      // Disallow usage of button elements without an explicit type attribute
+      "react/button-has-type": "error",
+
       // Prevent missing displayName in a React component definition
       "react/display-name": ["off", { ignoreTranspilerName: false }],
+
+      // Enforce arrow function type for function components, ensures
+      // consistency and avoids confusion between class and function components
+      "react/function-component-definition": [
+        "error",
+        {
+          namedComponents: "arrow-function",
+          unnamedComponents: "arrow-function",
+        },
+      ],
+
+      // Ensure destructuring and symmetric naming of useState hook value and
+      // setter variables
+      "react/hook-use-state": ["warn", { allowDestructuredState: true }],
 
       // Enforce boolean attributes notation in JSX
       "react/jsx-boolean-value": ["error", "never", { always: [] }],
@@ -48,7 +65,14 @@ export default [
       ],
 
       // Enforce or disallow spaces around equal sign
-      "react/jsx-equals-spacing": ["error", "always"],
+      "react/jsx-equals-spacing": ["warn", "never"],
+
+      // No jsx extension
+      // https://github.com/facebook/create-react-app/issues/87#issuecomment-234627904
+      "react/jsx-filename-extension": ["error", { extensions: [".js"] }],
+
+      // Enforce shorthand or standard form for React fragments
+      "react/jsx-fragments": ["warn", "syntax"],
 
       // Disable event handler naming conventions in JSX
       "react/jsx-handler-names": "off",
@@ -74,50 +98,35 @@ export default [
         },
       ],
 
+      // Disallows JSX context provider values from taking values that will
+      // cause needless rerenders
+      "react/jsx-no-constructed-context-values": "error",
+
+      // Disallow usage of javascript: URLs
+      "react/jsx-no-script-url": [
+        "error",
+        [
+          {
+            name: "Link",
+            props: ["href", "to"],
+          },
+        ],
+      ],
+
       // Prevent usage of unwrapped JSX strings
       "react/jsx-no-literals": "off",
+
+      // Disallow unnecessary fragments
+      "react/jsx-no-useless-fragment": "warn",
 
       // Enforce PascalCase for JSX components
       "react/jsx-pascal-case": ["error", { allowAllCaps: true }],
 
-      // Disable props sorting
-      "react/jsx-sort-props": "off",
-
-      // [Deprecated] Disable defaultProps declarations sorting
-      "react/jsx-sort-default-props": "off",
-
-      // No jsx extension
-      // https://github.com/facebook/create-react-app/issues/87#issuecomment-234627904
-      "react/jsx-filename-extension": ["error", { extensions: [".js"] }],
-
-      // This is no longer needed since React 17+ with the new JSX transform
-      // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
-      "react/react-in-jsx-scope": "off",
-
-      // React 18.3.0 deprecated defaultProps for function components
-      // https://github.com/facebook/react/pull/25699
-      "react/require-default-props": "off",
-
-      // We recommend using TypeScript instead of checking prop types at runtime
-      // https://react.dev/reference/react/Component#static-proptypes
-      "react/prop-types": "off",
-
-      // Enforce arrow function type for function components, ensures
-      // consistency and avoids confusion between class and function components
-      "react/function-component-definition": [
-        "error",
-        {
-          namedComponents: "arrow-function",
-          unnamedComponents: "arrow-function",
-        },
-      ],
-
       // Allow prop spreading to enable flexible and reusable components
       "react/jsx-props-no-spreading": "off",
 
-      // Allow unescaped entities in JSX (e.g., apostrophes), prevents noise for
-      // common text content in JSX
-      "react/no-unescaped-entities": "off",
+      // Disallow usage of Array index in keys
+      "react/no-array-index-key": "error",
 
       // Allow use of `dangerouslySetInnerHTML`, needed in some cases and
       // the responsibility lies with the developer
@@ -132,8 +141,33 @@ export default [
       // Prevent usage of setState
       "react/no-set-state": "off",
 
+      // Allow unescaped entities in JSX (e.g., apostrophes), prevents noise for
+      // common text content in JSX
+      "react/no-unescaped-entities": "off",
+
       // Require ES6 class declarations over React.createClass
       "react/prefer-es6-class": ["error", "always"],
+
+      // We recommend using TypeScript instead of checking prop types at runtime
+      // https://react.dev/reference/react/Component#static-proptypes
+      "react/prop-types": "off",
+
+      // This is no longer needed since React 17+ with the new JSX transform
+      // https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html
+      "react/react-in-jsx-scope": "off",
+
+      // React 18.3.0 deprecated defaultProps for function components
+      // https://github.com/facebook/react/pull/25699
+      "react/require-default-props": "off",
+
+      // Disallow extra closing tags for components without children
+      "react/self-closing-comp": [
+        "error",
+        {
+          component: true,
+          html: true,
+        },
+      ],
 
       // Enforce that all elements that require alternative text have meaningful
       // information

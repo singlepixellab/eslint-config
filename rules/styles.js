@@ -64,7 +64,7 @@ export default [
       "@stylistic/function-call-argument-newline": ["warn", "consistent"],
 
       // Enforce consistent line breaks inside function parentheses
-      "@stylistic/function-paren-newline": ["warn", "multiline-arguments"],
+      "@stylistic/function-paren-newline": "off",
 
       // Enforce consistent spacing around `*` operators in generator functions
       "@stylistic/generator-star-spacing": [
@@ -73,7 +73,7 @@ export default [
       ],
 
       // Enforce the location of arrow function bodies
-      "@stylistic/implicit-arrow-linebreak": ["warn", "beside"],
+      "@stylistic/implicit-arrow-linebreak": "off",
 
       // Enforce consistent indentation
       "@stylistic/indent": [
@@ -170,10 +170,7 @@ export default [
       ],
 
       // Require one JSX element per line
-      "@stylistic/jsx-one-expression-per-line": [
-        "warn",
-        { allow: "single-child" },
-      ],
+      "@stylistic/jsx-one-expression-per-line": "off",
 
       // Enforce PascalCase for user-defined JSX components
       "@stylistic/jsx-pascal-case": "warn",
@@ -214,7 +211,7 @@ export default [
           condition: "parens-new-line",
           declaration: "parens-new-line",
           logical: "parens-new-line",
-          prop: "parens-new-line",
+          prop: "ignore",
           propertyValue: "parens-new-line",
           return: "parens-new-line",
         },
@@ -272,7 +269,7 @@ export default [
           code: 80,
           tabWidth: 2,
           ignoreUrls: true,
-          ignoreComments: false,
+          ignoreComments: true,
           ignoreRegExpLiterals: true,
           ignoreStrings: true,
           ignoreTemplateLiterals: true,
@@ -370,31 +367,7 @@ export default [
       ],
 
       // Enforce consistent line breaks after opening and before closing braces
-      "@stylistic/object-curly-newline": [
-        "warn",
-        {
-          ObjectExpression: {
-            minProperties: 4,
-            multiline: true,
-            consistent: true,
-          },
-          ObjectPattern: {
-            minProperties: 4,
-            multiline: true,
-            consistent: true,
-          },
-          ImportDeclaration: {
-            minProperties: 4,
-            multiline: true,
-            consistent: true,
-          },
-          ExportDeclaration: {
-            minProperties: 4,
-            multiline: true,
-            consistent: true,
-          },
-        },
-      ],
+      "@stylistic/object-curly-newline": "off",
 
       // Enforce consistent spacing inside braces
       "@stylistic/object-curly-spacing": ["warn", "always"],
@@ -414,7 +387,7 @@ export default [
       "@stylistic/operator-linebreak": [
         "warn",
         "before",
-        { overrides: { "=": "none" } },
+        { overrides: { "=": "ignore" } },
       ],
 
       // Require or disallow padding within blocks

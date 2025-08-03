@@ -103,13 +103,7 @@ export default [
 
       // Flags modules with exports that are unused or missing, helps maintain
       // clean and efficient code
-      "import/no-unused-modules": [
-        "error",
-        {
-          unusedExports: true,
-          missingExports: true,
-        },
-      ],
+      "import/no-unused-modules": "off",
 
       // Prevents mixing CommonJS-style exports with `import`, ensures
       // consistency in module style
