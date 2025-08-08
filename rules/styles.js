@@ -386,8 +386,14 @@ export default [
       // Enforce consistent linebreak style for operators
       "@stylistic/operator-linebreak": [
         "warn",
-        "before",
-        { overrides: { "=": "ignore" } },
+        "after",
+        {
+          overrides: {
+            "=": "ignore",
+            "?": "before",
+            ":": "before",
+          },
+        },
       ],
 
       // Require or disallow padding within blocks
