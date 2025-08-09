@@ -12,6 +12,12 @@ export default [
       "**/public/build/**",
       "**/dist/**",
       "**/coverage/**",
+
+      // Prismic auto-generated files
+      "customtypes",
+      "src/slices/**/*/mocks.json",
+      "src/slices/**/*/model.json",
+      "prismicio-types.d.ts",
     ],
   },
 ];
