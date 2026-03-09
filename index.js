@@ -1,20 +1,11 @@
 import config from "./eslint.config.js";
-import core from "./rules/core.js";
-import ignores from "./rules/ignores.js";
-import imports from "./rules/imports.js";
-import jsdoc from "./rules/jsdoc.js";
-import prettier from "./rules/prettier.js";
-import react from "./rules/react.js";
-import styles from "./rules/styles.js";
 
 export default config;
 
-export const configs = {
-  core,
-  ignores,
-  imports,
-  jsdoc,
-  prettier,
-  react,
-  styles,
-};
+export { default as coreConfig } from "./rules/core.js";
+export { default as ignoresConfig } from "./rules/ignores.js";
+export { default as importsConfig } from "./rules/imports.js";
+export { default as jsdocConfig } from "./rules/jsdoc.js";
+export { default as prettierConfig } from "./rules/prettier.js";
+export { default as reactConfig } from "./rules/react.js";
+export { default as stylesConfig } from "./rules/styles.js";

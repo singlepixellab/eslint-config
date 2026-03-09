@@ -19,9 +19,42 @@
   "bugs": {
     "url": "https://github.com/singlepixellab/eslint-config/issues"
   },
-  "main": "index.js",
   "type": "module",
   "prettier": "@singlepixellab/prettier-config",
+  "files": [
+    "index.js",
+    "eslint.config.js",
+    "rules"
+  ],
+  "exports": {
+    ".": {
+      "import": "./index.js"
+    },
+    "./core": {
+      "import": "./rules/core.js"
+    },
+    "./ignores": {
+      "import": "./rules/ignores.js"
+    },
+    "./imports": {
+      "import": "./rules/imports.js"
+    },
+    "./jsdoc": {
+      "import": "./rules/jsdoc.js"
+    },
+    "./prettier": {
+      "import": "./rules/prettier.js"
+    },
+    "./react": {
+      "import": "./rules/react.js"
+    },
+    "./styles": {
+      "import": "./rules/styles.js"
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
   "peerDependencies": {
     "eslint": ">= 9"
   },
