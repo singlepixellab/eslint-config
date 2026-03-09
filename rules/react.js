@@ -53,19 +53,16 @@ export default [
       "react/jsx-boolean-value": ["error", "never", { always: [] }],
 
       // Validate closing bracket location in JSX
-      "react/jsx-closing-bracket-location": ["error", "tag-aligned"],
+      "react/jsx-closing-bracket-location": "off",
 
       // Validate closing tag location in JSX
-      "react/jsx-closing-tag-location": "error",
+      "react/jsx-closing-tag-location": "off",
 
       // Enforce or disallow spaces inside of curly braces in JSX attributes
-      "react/jsx-curly-spacing": [
-        "error",
-        { when: "never", allowMultiline: true },
-      ],
+      "react/jsx-curly-spacing": "off",
 
       // Enforce or disallow spaces around equal sign
-      "react/jsx-equals-spacing": ["warn", "never"],
+      "react/jsx-equals-spacing": "off",
 
       // No jsx extension
       // https://github.com/facebook/create-react-app/issues/87#issuecomment-234627904
@@ -78,13 +75,10 @@ export default [
       "react/jsx-handler-names": "off",
 
       // Validate props indentation in JSX
-      "react/jsx-indent-props": ["error", 2],
+      "react/jsx-indent-props": "off",
 
       // Limit maximum of props on a single line in JSX
-      "react/jsx-max-props-per-line": [
-        "error",
-        { maximum: 1, when: "multiline" },
-      ],
+      "react/jsx-max-props-per-line": "off",
 
       // Prevent usage of .bind() in JSX props
       "react/jsx-no-bind": [

@@ -11,9 +11,6 @@ export default [
   // Global ignores should always be first
   ...ignores,
 
-  // styles: @stylistic/eslint-plugin
-  ...styles,
-
   // eslint-plugin-import
   ...imports,
 
@@ -24,6 +21,9 @@ export default [
   ...react,
 
   ...core,
+
+  // styles: @stylistic/eslint-plugin
+  ...styles,
 
   // Prettier should be last to have the opportunity to override other configs
   ...prettier,
