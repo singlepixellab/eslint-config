@@ -273,7 +273,7 @@ export default [
           labelComponents: [],
           labelAttributes: [],
           controlComponents: [],
-          assert: "both",
+          assert: "either",
           depth: 25,
         },
       ],
@@ -382,6 +382,8 @@ export default [
         "error",
         {
           nav: ["navigation"],
+          ul: ["list"],
+          ol: ["list"],
         },
       ],
 
