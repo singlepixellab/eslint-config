@@ -8,8 +8,8 @@ export default [
     ...js.configs.recommended,
   },
   {
-    name: "spl/base",
-    files: ["**/*.{js,mjs,cjs}"],
+    name: "spl/core",
+    files: ["**/*.{js,mjs,cjs,ts,tsx,mts,cts}"],
     languageOptions: {
       ecmaVersion: "latest",
       sourceType: "module",

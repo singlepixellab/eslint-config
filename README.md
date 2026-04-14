@@ -6,6 +6,7 @@ The ESLint rules and configs used by Single Pixel Lab.
 
 - Node.js ≥ 18
 - ESLint ≥ 9
+- TypeScript ≥ 3.3.1
 
 ## Usage
 
@@ -40,15 +41,16 @@ export default [...styles, ...react];
 
 Available modules:
 
-| Module   | Import                                   | Description                    |
-| -------- | ---------------------------------------- | ------------------------------ |
-| Core     | `@singlepixellab/eslint-config/core`     | Base ESLint rules              |
-| Ignore   | `@singlepixellab/eslint-config/ignores`  | Default ignore patterns        |
-| Import   | `@singlepixellab/eslint-config/imports`  | Import ordering and validation |
-| JSDoc    | `@singlepixellab/eslint-config/jsdoc`    | JSDoc linting                  |
-| Prettier | `@singlepixellab/eslint-config/prettier` | Prettier integration           |
-| React    | `@singlepixellab/eslint-config/react`    | React and Hooks rules          |
-| Style    | `@singlepixellab/eslint-config/styles`   | Stylistic rules                |
+| Module     | Import                                     | Description                    |
+| ---------- | ------------------------------------------ | ------------------------------ |
+| Core       | `@singlepixellab/eslint-config/core`       | Base ESLint rules              |
+| Ignore     | `@singlepixellab/eslint-config/ignores`    | Default ignore patterns        |
+| Import     | `@singlepixellab/eslint-config/imports`    | Import ordering and validation |
+| JSDoc      | `@singlepixellab/eslint-config/jsdoc`      | JSDoc linting                  |
+| Prettier   | `@singlepixellab/eslint-config/prettier`   | Prettier integration           |
+| React      | `@singlepixellab/eslint-config/react`      | React and Hooks rules          |
+| Style      | `@singlepixellab/eslint-config/styles`     | Stylistic rules                |
+| TypeScript | `@singlepixellab/eslint-config/typescript` | TypeScript linting             |
 
 ### Named exports
 

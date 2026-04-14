@@ -5,11 +5,14 @@ import react from "./rules/react.js";
 import prettier from "./rules/prettier.js";
 import jsdoc from "./rules/jsdoc.js";
 import styles from "./rules/styles.js";
+import typescript from "./rules/typescript.js";
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   // Global ignores should always be first
   ...ignores,
+
+  ...core,
 
   // eslint-plugin-import
   ...imports,
@@ -20,7 +23,8 @@ export default [
   // eslint-plugin-react, eslint-plugin-react-hooks etc
   ...react,
 
-  ...core,
+  // @typescript-eslint
+  ...typescript,
 
   // styles: @stylistic/eslint-plugin
   ...styles,

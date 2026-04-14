@@ -50,13 +50,17 @@
     },
     "./styles": {
       "import": "./rules/styles.js"
+    },
+    "./typescript": {
+      "import": "./rules/typescript.js"
     }
   },
   "engines": {
     "node": ">=18"
   },
   "peerDependencies": {
-    "eslint": ">= 9"
+    "eslint": ">= 9",
+    "typescript": ">=3.3.1"
   },
   "scripts": {
     "format": "prettier --cache --write .",
@@ -79,6 +83,7 @@
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
-    "globals": "^17.4.0"
+    "globals": "^17.4.0",
+    "typescript-eslint": "^8.58.2"
   }
 }

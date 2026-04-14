@@ -6,7 +6,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 export default [
   {
     name: "spl/react",
-    files: ["**/*.js"],
+    files: ["**/*.{js,tsx}"],
     settings: {
       react: {
         version: "detect",
@@ -169,7 +169,7 @@ export default [
         "error",
         {
           "elements": ["img", "object", "area", 'input[type="image"]'],
-          "img": [],
+          "img": ["Image"],
           "object": [],
           "area": [],
           'input[type="image"]': [],

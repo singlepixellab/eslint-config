@@ -12,6 +12,7 @@ export default [
       "**/public/build/**",
       "**/dist/**",
       "**/coverage/**",
+      "next-env.d.ts",
 
       // Prismic auto-generated files
       "customtypes",

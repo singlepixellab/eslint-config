@@ -5,7 +5,20 @@ export default [
   importPlugin.flatConfigs.recommended,
   {
     name: "spl/imports",
-    files: ["**/*.{js,mjs,cjs}"],
+    files: ["**/*.{js,mjs,cjs,ts,tsx,mts,cts}"],
+    settings: {
+      "import/parsers": {
+        "@typescript-eslint/parser": [".ts", ".mts", ".cts", ".tsx", ".d.ts"],
+      },
+      "import/resolver": {
+        node: {
+          extensions: [".js", ".jsx", ".ts", ".tsx", ".d.ts"],
+        },
+        typescript: {
+          alwaysTryTypes: true,
+        },
+      },
+    },
     rules: {
       // Ensures imports point to a file/module that exists, prevents broken
       // imports
