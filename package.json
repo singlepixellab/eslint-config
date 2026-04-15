@@ -1,6 +1,6 @@
 {
   "name": "@singlepixellab/eslint-config",
-  "version": "2.2.4",
+  "version": "2.2.5",
   "description": "The ESLint rules and configs used by Single Pixel Lab",
   "author": "Single Pixel Lab",
   "keywords": [
