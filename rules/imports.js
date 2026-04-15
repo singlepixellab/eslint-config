@@ -78,7 +78,6 @@ export default [
             {
               pattern: "~*/**",
               group: "internal",
-              position: "after",
             },
           ],
           "groups": [
