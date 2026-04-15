@@ -78,7 +78,6 @@ export default [
             enabled: true,
             types: "types-last",
           },
-          "sortTypesGroup": true,
           "pathGroups": [
             {
               pattern: "~*/**",
@@ -87,15 +86,12 @@ export default [
             },
           ],
           "groups": [
-            [
-              "builtin",
-              "external",
-              "internal",
-              "parent",
-              "sibling",
-              "index",
-              "type",
-            ],
+            "builtin",
+            "external",
+            "internal",
+            "parent",
+            "sibling",
+            "index",
           ],
         },
       ],
