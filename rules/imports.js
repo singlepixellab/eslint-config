@@ -68,10 +68,6 @@ export default [
       "import/order": [
         "error",
         {
-          "alphabetize": {
-            order: "asc",
-            caseInsensitive: true,
-          },
           "distinctGroup": false,
           "newlines-between": "always",
           "named": {
