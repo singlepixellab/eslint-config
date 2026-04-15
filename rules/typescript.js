@@ -30,7 +30,7 @@ export default [
           caughtErrorsIgnorePattern: "^_",
           destructuredArrayIgnorePattern: "^_",
           varsIgnorePattern: "^_",
-          ignoreRestSiblings: true
+          ignoreRestSiblings: true,
         },
       ],
     },

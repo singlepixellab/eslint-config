@@ -64,9 +64,11 @@ export default [
       // Enforce or disallow spaces around equal sign
       "react/jsx-equals-spacing": "off",
 
-      // No jsx extension
-      // https://github.com/facebook/create-react-app/issues/87#issuecomment-234627904
-      "react/jsx-filename-extension": ["error", { extensions: [".js"] }],
+      // Restrict file extensions that may contain JSX
+      "react/jsx-filename-extension": [
+        "error",
+        { extensions: [".js", ".tsx"] },
+      ],
 
       // Enforce shorthand or standard form for React fragments
       "react/jsx-fragments": ["warn", "syntax"],

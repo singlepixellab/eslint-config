@@ -68,8 +68,34 @@ export default [
       "import/order": [
         "error",
         {
-          groups: [
-            ["builtin", "external", "internal", "parent", "sibling", "index"],
+          "alphabetize": {
+            order: "asc",
+            caseInsensitive: true,
+          },
+          "distinctGroup": false,
+          "newlines-between": "always",
+          "named": {
+            enabled: true,
+            types: "types-last",
+          },
+          "sortTypesGroup": true,
+          "pathGroups": [
+            {
+              pattern: "~*/**",
+              group: "external",
+              position: "after",
+            },
+          ],
+          "groups": [
+            [
+              "builtin",
+              "external",
+              "internal",
+              "parent",
+              "sibling",
+              "index",
+              "type",
+            ],
           ],
         },
       ],
