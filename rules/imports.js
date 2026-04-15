@@ -81,7 +81,7 @@ export default [
           "pathGroups": [
             {
               pattern: "~*/**",
-              group: "external",
+              group: "internal",
               position: "after",
             },
           ],
