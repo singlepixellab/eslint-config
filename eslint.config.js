@@ -1,9 +1,9 @@
-import ignores from "./rules/ignores.js";
 import core from "./rules/core.js";
+import ignores from "./rules/ignores.js";
 import imports from "./rules/imports.js";
-import react from "./rules/react.js";
-import prettier from "./rules/prettier.js";
 import jsdoc from "./rules/jsdoc.js";
+import prettier from "./rules/prettier.js";
+import react from "./rules/react.js";
 import styles from "./rules/styles.js";
 import typescript from "./rules/typescript.js";
 
