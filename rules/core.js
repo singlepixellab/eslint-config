@@ -533,16 +533,8 @@ export default [
       // prevent undefined from being shadowed or assigned a different value
       "no-undefined": "off",
 
-      // Disallow dangling underscores in identifiers
-      "no-underscore-dangle": [
-        "error",
-        {
-          allow: [],
-          allowAfterThis: false,
-          allowAfterSuper: false,
-          enforceInMethodNames: true,
-        },
-      ],
+      // Allow underscores in identifiers for flexibility
+      "no-underscore-dangle": "off",
 
       // Disallow the use of Boolean literals in conditional expressions
       // also, prefer `a || b` over `a ? a : b`
